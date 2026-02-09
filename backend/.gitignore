@@ -44,3 +44,6 @@ coverage.xml
 # OS generated
 .DS_Store
 Thumbs.db
+
+migrations/
+instance/

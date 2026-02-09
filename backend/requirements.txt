@@ -3,3 +3,8 @@ flask-cors
 python-dotenv
 flask-sqlalchemy
 flask-migrate
+fastapi
+email-validator
+passlib[bcrypt]
+python-jose[cryptography]
+python-multipart

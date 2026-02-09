@@ -1,7 +1,7 @@
 from app import db
 from datetime import datetime
 from enum import Enum as PyEnum
-
+import uuid
 
 class UserRole(str, PyEnum):
     CUSTOMER = "customer"
@@ -12,7 +12,7 @@ class UserRole(str, PyEnum):
 class User(db.Model):
     __tablename__ = "users"
 
-    id = db.Column(db.Integer, primary_key=True)
+    id = db.Column(db.UUID, primary_key=True, default=uuid.uuid4, unique=True, nullable=False)
     email = db.Column(db.String(120), unique=True, nullable=False, index=True)
     username = db.Column(db.String(50), unique=True, nullable=False, index=True)
     password_hash = db.Column(db.String(255), nullable=False)
