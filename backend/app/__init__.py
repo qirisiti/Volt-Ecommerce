@@ -12,6 +12,7 @@ load_dotenv()
 
 db = SQLAlchemy()
 migrate = Migrate()
+from app.models.user import User, UserRole 
 
 
 def create_app():
